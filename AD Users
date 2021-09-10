@@ -1,0 +1,6 @@
+$allDisabldAccounts = (Search-ADAccount -AccountDisabled).count
+Write-Output "Disabled accounts:`t`t $allDisabldAccounts"
+$all = (get-aduser -Filter *).count
+$allactive = $all - $allDisabldAccounts
+Write-Output "Active Accounts:`t`t $allactive"
+Write-Output "All Accounts:`t`t`t $all"
