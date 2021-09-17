@@ -1,0 +1,11 @@
++----------------Get local admins-----------------+
+
++----------------Get AD Users with properties-----+
++
++ Get-ADUser -filter * -properties passwordlastset, passwordneverexpires ,..... | select-object Name, passwordneverexpires,...  | Export-csv -path C:\......csv
++
++------------Get Local admins-------------------------------------+
++   net localgroup administrators                                 +
++-----------------------------------------------------------------+
++
++
