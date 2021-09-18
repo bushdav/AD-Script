@@ -8,4 +8,8 @@
 +   net localgroup administrators                                 +
 +-----------------------------------------------------------------+
 +
-+
++------------Force AAD Sync------------------------------------------------------------------+
++      Import-Module -Name 'C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1' +
++                                                                                            +  
++       Start-ADSyncSyncCycle -PolicyType Delta(or initial for whole directory sync)         + 
++-----------------------------------------------------------------  -------------------------+  
